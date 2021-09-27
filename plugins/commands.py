@@ -31,7 +31,7 @@ async def start(bot, cmd):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("😎 Join Our Official Channel 😎", url=invite_link.invite_link)
+                                InlineKeyboardButton("😎 Join Channel 😎", url=invite_link.invite_link)
                             ],
                             [
                                 InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{file_id}")
@@ -66,7 +66,7 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🔎 Search again', switch_inline_query_current_chat=''),
+                        InlineKeyboardButton('Request Series 📺', url='https://t.me/fhserieschat'),
                         InlineKeyboardButton('Request Movies 🎟', url='https://t.me/fhmoviechat')
                     ]
                     ]
@@ -86,7 +86,7 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("😎 Join Our Official Channel 😎", url=invite_link.invite_link)
+                        InlineKeyboardButton("😎 Join Channel 😎", url=invite_link.invite_link)
                     ]
                 ]
             )
@@ -99,8 +99,8 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🔎 Search again", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("Request Movies 🎟", url="https://t.me/fhmoviechat")
+                        InlineKeyboardButton("Request Series 📺", url='https://t.me/fhserieschat'),
+                        InlineKeyboardButton("Request Movies 🎟", url='https://t.me/fhmoviechat')
                     ],
                     [
                         InlineKeyboardButton("About", callback_data="about")
@@ -207,5 +207,7 @@ async def bot_info(bot, message):
 <b>✴️ Source Code :</b> <a href='https://t.me/AdhavaaBiriyaniKittiyalo'>Click here</a>
 
 <b>✴️ Request Movies :</b> <a href='https://t.me/fhmoviechat'>FH MOVIES</a>
+
+<b>✴️ Request Series :</b> <a href='https://t.me/fhserieschat'>FH WEB-TV SERIES HOME</a>
 
 </b>📜 Quote :</b> <code>ആരും പേടിക്കണ്ട എല്ലാവർക്കും കിട്ടും™️</code>""".format(query.from_user.mention))
