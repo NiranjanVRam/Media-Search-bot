@@ -59,8 +59,17 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"LiqWid#{file_id}")]
                     )
         else:
-            await client.send_sticker(chat_id=message.from_user.id, sticker='CAADBQADMwIAAtbcmFelnLaGAZhgBwI')
-            return
+            Send_message=await bot.send_video(
+                chat_id = update.chat.id,
+                video="https://telegra.ph/file/d59980009d3f4d8b89ee1.mp4",
+                caption=f"Couldn't Find This Movie.Please Try Again Or Search At Google.com For Correct Spelling Of The Movie.Copy It And Send Here\n\nഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺\n\nIf You Think this is an error, provide feedback at @fhhelperbot and if you are looking for any series, ask at @fhserieschat ...",
+                parse_mode="html",
+                reply_to_message_id=update.message_id
+            )
+        await asyncio.sleep(15) # in seconds
+        await Send_message.delete()
+        #await bot.delete_messages(update.chat.id,update.message_id)
+        return
 
         if not btn:
             return
